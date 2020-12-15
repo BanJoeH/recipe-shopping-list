@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo List</title>
+  <title>Recipe Shopping List</title>
 </head>
 <body>
 
@@ -34,9 +34,11 @@
       for (var i = 0; i < todos.length; i++) {
         var todoLi = document.createElement('li');
         if (todos[i].completed) {
-          todoLi.innerText = '[X] ' + todos[i].todoText;
+          todoLi.style.textDecoration = "line-through";
+          todoLi.style.Color = "#cccccc";
+          todoLi.innerText = todos[i].todoText;
         } else {
-          todoLi.innerText = '[ ] ' + todos[i].todoText;
+          todoLi.innerText = todos[i].todoText;
         }
         // add toggle button to each list item
         var toggleButton = document.createElement('button');
